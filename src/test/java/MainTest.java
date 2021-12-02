@@ -19,23 +19,10 @@ public class MainTest {
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("deviceName", "pixel");
+        Inspector inspector = new Inspector("/Users/adelgaraev/Downloads/ru.yandex.mail_8.2.1_92370.apk","ru.yandex.mail", "ru.yandex.mail.ui.LoginActivity" );
 
-        capabilities.setCapability("platformName", "Android");
-
-        capabilities.setCapability("platformVersion", "9.0");
-
-        capabilities.setCapability("udid", "emulator-5554");
-
-        capabilities.setCapability("app", "/Users/adelgaraev/Downloads/ru.yandex.mail_8.2.1_92370.apk");
-
-        capabilities.setCapability("appPackage", "ru.yandex.mail");
-
-        capabilities.setCapability("appActivity", "ru.yandex.mail.ui.LoginActivity");
-
-        driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), inspector.capabilities);
         autorizationPage = new AutorizationPage(driver);
         mailPage = new MailPage(driver);
         settingsPage = new SettingsPage(driver);

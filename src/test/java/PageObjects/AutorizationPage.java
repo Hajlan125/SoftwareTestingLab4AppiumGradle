@@ -16,7 +16,8 @@ public class AutorizationPage {
             driver.wait(delay);
         }
     }
-    public WebElement setYandexAuth() throws InterruptedException {
+
+    public WebElement setYandexAuth() {
         return driver.findElementById("ru.yandex.mail:id/list_yandex");
     }
     public WebElement loginEditField() {
@@ -31,6 +32,7 @@ public class AutorizationPage {
     public WebElement goToMailButton() {
         return driver.findElementById("ru.yandex.mail:id/go_to_mail_button");
     }
+
     public void loginInput() throws InterruptedException {
         setYandexAuth().click();
         loginEditField().sendKeys("AdRGaraev");

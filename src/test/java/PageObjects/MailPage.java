@@ -16,6 +16,7 @@ public class MailPage {
     public WebElement sentButton() {
         return driver.findElementByXPath("//android.widget.LinearLayout[7]");
     }
+
     public void sendedMailsCheck() {
         menuButton().click();
         //"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[7]
@@ -29,10 +30,12 @@ public class MailPage {
         waiting(1000);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        driver.tap(1,200,1430, 300);
+        //driver.tap(1,200,1430, 300);
+        driver.findElementByXPath("//android.widget.LinearLayout[15]").click();
     }
     public void logout() {
-        driver.tap(1,200,1680,300);
+        //driver.tap(1,200,1680,300);
+        driver.findElementByXPath("//android.widget.LinearLayout[17]").click();
     }
     public void waiting(int delay) throws InterruptedException {
         synchronized (driver){

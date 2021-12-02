@@ -15,9 +15,9 @@ public class SettingsPage {
     public WebElement returningButton() {
         return driver.findElementByAccessibilityId("Navigate up");
     }
-    public void darkThemeOnOff() {
-//        driver.tap(1,960, 790,300);
+    //        driver.tap(1,960, 790,300);
 //        /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Switch
+    public void darkThemeOnOff() {
         themeSwitch().click();
     }
     public void mailPageReturning() {
